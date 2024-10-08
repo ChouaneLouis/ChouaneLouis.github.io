@@ -4,8 +4,6 @@
 }
 
 
-/* FORMAT GÉNÉRAL */
-
 body {
   margin: 0;
   padding: 0;
@@ -20,24 +18,15 @@ body {
   justify-content: center;
 }
 
-#bg {
-  width: 80%; /* Prend 80% de la largeur de la fenêtre */
-  max-width: 1100px; /* Prend au maximum 1200 pixel de la largeur de la fenêtre */
-  height: 100%;
-  box-shadow: 0 0px 8px 0 #334433;
-  background-color: #f5f5f5;
-  position: fixed;
-
-  z-index: 5;
-}
-
 main {
   width: 80%; /* Prend 80% de la largeur de la fenêtre */
   max-width: 1100px; /* Prend au maximum 1200 pixel de la largeur de la fenêtre */
-  background-color: transparent;
+  min-height: 1000px; /* Prend minimum 100% de la hauteur de la fenêtre */
+  box-shadow: 0 0px 8px 0 #334433;
+  background-color: #f5f5f5;
 
   font-family: sans;
-  z-index: 10;
+  font-size: ;
 }
 
 a {
@@ -45,37 +34,12 @@ a {
   color: inherit; /* Hérite de la couleur de l'article pour éviter de colorer le texte */
 }
 
-.ligne-centre {
-  margin: 0;
-  padding: 10px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.bouton {
-  margin: 0 10px;
-
-  width: 200px;
-  line-height: 30px;
-  border: solid #6A874F 2px;
-  border-radius: 15px;
-  text-align: center;
-  color: #6A874F;
-
-  transition: 0.3s;
-}
-
-.bouton:hover {
-  background-color: #6A874F;
-  color: #fff;
-}
 
 /* HEADER */
 
 header {
-  padding: 30px 20px;
+  padding: 20px;
+  padding-bottom: 30px;
   box-shadow: 0 8px 4px -2px #6B788820;
 
   display: flex;
@@ -84,7 +48,7 @@ header {
 }
 
 #title h1 {
-  margin: 0 0 0 30px;
+  margin: 0 0 0 40px;
 
   font-family: "Roboto Black";
   color: #263526;
@@ -94,8 +58,6 @@ header {
   border-radius: 30px;
   border: 7px solid transparent;
   box-shadow: 0 1px 4px 3px #6B788820;
-
-  transition: 0.3s;
 
   display: flex;
   align-items: center;
@@ -129,14 +91,22 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 100px;
+  gap: 20px;
 }
 
 #article-div article {
   padding: 10px 20px;
 
-  box-shadow: 0 4px 0px -2px #6B788820;
+  border-radius: 30px;
+  background-color: #6B788810;
+  box-shadow: 0 1px 4px 3px #6B788820;
 }
+
+/*#article-div article:hover {
+  background-color: #6B788820;
+  box-shadow: 0 1px 4px 1px #6B788820;
+  box-shadow: 0 2px 4px #6B788820;
+}*/
 
 #article-div article h2 {
   margin: 0px 10px 0px 10px;
@@ -154,15 +124,23 @@ header {
   color: #334433;
 }
 
+
+.ligne {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
 /* ARTICLE BIENVENUE */
 
 #bienvenue img {
-  margin: 0 30px 0 0;
   width: 150px;
   height: 200px;
   border-radius: 30px;
 }
 
 #bienvenue p {
-  width: 300px;
+  max-width: 80%;
 }
