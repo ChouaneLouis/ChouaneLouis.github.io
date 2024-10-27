@@ -7,7 +7,9 @@
   src: url('./fonts/Roboto/Roboto-Regular.ttf') format('truetype');
 }
 
-:root{
+html {
+  scroll-behavior: smooth;
+
   --light-green : #6A874F;
   --green : #334433;
   --dark-green: #263526;
@@ -17,12 +19,6 @@
 }
 
 /* FORMAT GÉNÉRAL */
-
-html {
-  
-  scroll-behavior: smooth;
-
-}
 
 body {
   margin: 0;
