@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Roboto Black";
-  src: url('./fonts/Roboto/Roboto-Black.ttf') format('truetype');
+  src: url('../fonts/Roboto/Roboto-Black.ttf') format('truetype');
 }
 @font-face {
   font-family: "Roboto";
-  src: url('./fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+  src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
 }
 
 html {
@@ -24,7 +24,7 @@ body {
   margin: 0;
   padding: 0;
 
-  background-image: url("images/foret_pin_flou.jpg");
+  background-image: url("../images/foret_pin_flou.jpg");
   background-size: cover; /* Permet de couvrir toute la zone de la page */
   background-repeat: no-repeat; /* Empêche la répétition de l'image */
   background-position: center; /* Centre l'image sur la page */
@@ -64,9 +64,22 @@ p a:hover {
   align-items: center;
 }
 
+.ligne-centre-inverse {
+  margin: 0;
+  padding-top: 10px;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
 .ligne-element {
   margin-top: 10px;
   padding: 0 20px;
+
+  width: 95%;
 
   border-left: solid var(--light-green) 10px;
   background-color: var(--shadow);
@@ -85,6 +98,40 @@ p a:hover {
   color: var(--green);
 }
 
+.ligne-chrono {
+  display: flex;
+  align-items: center;
+
+}
+
+.ligne-chrono em {
+  min-width: 100px;
+  text-align: right;
+  color: var(--light-green);
+}
+
+.ligne-chrono h3 {
+  margin-left: 40px;
+  margin-bottom: 0;
+
+  color: var(--dark-green);
+}
+
+.ligne-chrono em + div {
+  margin-left: 20px;
+  margin-right: -5px;
+
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: 3px;
+  background-color: var(--light-green);
+}
+
+.ligne-chrono em + div + div {
+  padding-left: 20px;
+  border-left: solid 2px var(--light-green);
+}
+
 .bouton, .bouton-fleche {
   margin: 0 10px;
 
@@ -99,7 +146,7 @@ p a:hover {
 }
 
 .bouton {
-  width: 200px;
+  width: 100px;
 }
 
 .bouton-fleche {
@@ -187,16 +234,17 @@ main {
   width: 80%; /* Prend 80% de la largeur de la fenêtre */
   max-width: 1100px; /* Prend au maximum 1200 pixel de la largeur de la fenêtre */
 
-  font-family: sans;
+  font-family: sans-serif;
   z-index: 10;
-
+/*
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 0;*/
 }
 
 main article {
   margin: 0 30px;
+  padding-top: 80px;
 
   min-height: 100dvh;
   box-shadow: 0 3px var(--shadow);
@@ -234,6 +282,10 @@ main article li {
   color: var(--green);
 }
 
+main article .intro {
+  max-width: 630px;
+}
+
 /* ARTICLE BIENVENUE */
 
 #bienvenue img {
@@ -250,13 +302,12 @@ main article li {
 
 #video {
   margin-top: 20px;
-  width: 80dvh;
-  height: 45dvh;
+  width: 64dvw;
+  max-width: 880px;
+  height: 36dvw;
+  max-height: 495px;
 
   background-color: var(--shadow);
-}
-
-#bienvenue p {
 }
 
 /* ACTIVITE PERSONNEL */
@@ -274,6 +325,22 @@ main article li {
   background-color: var(--shadow);
 }
 
-#cours-ingenierie p {
-  max-width: 630px;
+/* MOBILITE */
+
+#mobilite img {
+  margin: 0 15px;
+  width: 300px;
+  height: 200px;
+}
+
+#mobilite .ligne-centre .description {
+  width: 40%;
+
+  text-align: left;
+}
+
+#mobilite .ligne-centre-inverse .description {
+  width: 40%;
+
+  text-align: right;
 }
