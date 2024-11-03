@@ -290,9 +290,9 @@ main article .intro {
 
 #bienvenue img {
   margin: 0 15px;
-  width: 150px;
+  width: 200px;
   height: 200px;
-/*  border-radius: 30px;*/
+  border-radius: 100px;
 }
 
 #bienvenue img + div {
