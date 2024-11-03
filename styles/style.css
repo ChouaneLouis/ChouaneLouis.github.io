@@ -308,6 +308,17 @@ main article .intro {
   max-height: 495px;
 
   background-color: var(--shadow);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#video iframe {
+  width: 61dvw;
+  max-width: 840px;
+  height: 33dvw;
+  max-height: 473px;
 }
 
 /* ACTIVITE PERSONNEL */
