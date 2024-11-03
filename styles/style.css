@@ -288,14 +288,14 @@ main article .intro {
 
 /* ARTICLE BIENVENUE */
 
-#bienvenue img {
+#moi {
   margin: 0 15px;
   width: 200px;
   height: 200px;
   border-radius: 100px;
 }
 
-#bienvenue img + div {
+#moi + div {
   margin: 0 15px;
   width: 500px;
 }
